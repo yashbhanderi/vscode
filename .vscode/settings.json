@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "iostream": "cpp"
+  },
+  "launch": {
+      
+    "configurations": [],
+    "compounds": []
+  },
+  "liveServer.settings.port": 5501
+}

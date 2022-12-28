@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <title>Document</title>
+</head>
+
+<body ng-app="myApp" ng-controller="myController">
+
+    Name: <input type="text" ng-model="name"> <br>
+
+    City: <input type="text" ng-model="city"> <br>
+
+    Age: <input type="checkbox" ng-model="age" > 18 above ? <br> 
+
+    Gender:
+
+    <input type="radio" ng-model="gender" value="m"> Male
+    <input type="radio" ng-model="gender" value="f"> Female
+    <input type="radio" ng-model="gender" value="o"> Other
+
+    <div ng-switch="gender" >
+        <div ng-switch-when="m" >
+            <h1>{{name}} is Male</h1>
+        </div>
+        <div ng-switch-when="f" >
+            <h1>{{name}} is Female</h1>
+        </div>
+        <div ng-switch-when="o" >
+            <h1>{{name}} is Other</h1>
+        </div>
+    </div>
+
+    <h1 ng-show="age" >{{name}} is 18 above</h1>
+
+    Address: {{name}} is live in {{city}}
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller('myController', ($scope) => {
+            $scope.name = "Yash"
+            $scope.city = "Surat"
+        })
+
+    </script>
+
+</body>
+
+</html>

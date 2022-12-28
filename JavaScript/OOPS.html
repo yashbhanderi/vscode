@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        // Object Constructors
+
+        // function Book(title,author) {
+        //     this.title = title;
+        //     this.author = author;
+        //     this.getSummury = function() {
+        //         return `${this.title} is written by ${this.author}`;
+        //     }
+        // }
+
+        // const book1 = new Book('story of yash : part-1','Yash bhanderi');
+        // const book2 = new Book('story of yash : part-2','Nikhil bhanderi');
+        // console.log(book1.getSummury());
+        // console.log(book2.getSummury());
+
+        // Object Prototypes
+
+        // function Particle() {
+        //     this.x = 100;
+        //     this.y = 200;
+        //     // this.show = function() {
+        //     //     this.z = this.x + this.y;
+        //     // }
+        // }
+
+        // Particle.prototype.double = function() {
+        //     this.x = this.x*2;
+        //     console.log(this.x);
+        // }
+
+        // // Particle.prototype.show = function() {
+        // //     this.z = this.x + this.y;
+        // // }
+
+        // const p1 = new Particle();
+        // const p2 = new Particle();
+
+        // Object
+
+        //   let Myself = {
+        //     fname:'Yash',
+        //     lname:'Bhanderi',
+        //   };
+
+        //   console.log(Myself);
+
+        // function
+
+        // function Myself() {
+        //     this.name = 'Yash Bhanderi';
+        // }
+
+        // let p1 = new Myself();
+        // let p2 = new Myself();
+
+        // Myself.prototype.age = 18;
+
+        // console.log(Myself);
+
+        // function Prof(name,lname) {
+        //     this.name = name;
+        //     this.lname = lname;
+        // }
+
+        // console.log(Profile);
+        // console.log(Prof.prototype);
+
+        // const book1 = {
+        //     title : "the story of yash : part 1",
+        //     author : 'Yash Bhanderi',
+        //     year : 2019,
+        //     get() {
+        //         return `${this.title} is written by ${this.author}`;
+        //     }
+        //     set(year) {
+        //         this.year = year;
+        //     }
+        // }
+
+        // book1.set(2020);
+        // console.log(book1.year);
+
+      //   Object.create................................
+
+      //   function fruits() {
+      //       this.name = 'fruit 1';
+      //       this.color = 'Green';
+      //   }
+
+      //   function Kiwi() {
+      //     this.size = 'Medium';
+      //   }
+
+      //   Kiwi.prototype = Object.create(fruits.prototype);
+      //   const kv = new Kiwi();
+      //   console.log(kv);
+      //   console.log(kv.color);
+      //   console.log(kv.__proto__===Object.prototype);
+      //   console.log(kv.__proto__===Kiwi.prototype);
+      //   console.log(kv.__proto__===fruits.prototype);
+
+
+
+// Class.......................................
+
+
+    //   class city {
+    //       constructor(){
+    //           this.name = 'Surat';
+    //           this.state = 'Gujarat';
+    //       }
+    //       getCityInfo() {
+    //         return `I am living in ${this.name} and which is in state ${this.state}`;
+    //       }
+
+    //       country = 'India';
+    //   }
+
+    //   let city1 = new city();
+
+
+    // //   console.log(city1.getCityInfo());
+    //   console.log(city1.country);
+
+
+    // Inheritance............................................
+
+
+    class Car {
+        constructor(brand) {
+            this.name = brand;
+        }
+        present() {
+            return 'I have a ' + this.name;
+        }
+    }
+
+    class Model extends Car {
+        constructor(brand,mod){
+            super(brand);
+            this.model = mod;
+        }
+        show() {
+            return this.present() + ' with this Model ' + this.model;
+        }
+    }
+
+    let myCar2 = new Model('Lamborghini','LMB-27');
+
+    console.log(myCar2.show());
+
+    </script>
+  </body>
+</html>

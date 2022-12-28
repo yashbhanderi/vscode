@@ -1,0 +1,21 @@
+{
+  "liveServer.settings.port": 5501,
+  "editor.snippetSuggestions": "top",
+  "[json]": {
+
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+  "launch": {
+    
+
+
+    "configurations": [],
+    "compounds": []
+  },
+  "json.schemas": [
+  
+  ]
+}

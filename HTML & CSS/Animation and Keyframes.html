@@ -1,0 +1,120 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: black;
+        }
+
+        .container{
+            border: 2px solid white;
+            height: 300px;
+            width: 400px;
+            padding: 5px;
+            display: flex;
+        }
+
+        .lang{
+            font-family: bree serif;
+            font-weight: bold;
+        }
+
+        #lang1{
+            animation-name: yash;
+            animation-duration: 2s;
+        }
+        #lang2{
+            animation-name: yash;
+            animation-delay: 2s;
+            animation-duration: 2s;
+        }
+        #lang3{
+            animation-name: yash;
+            animation-delay: 4s;
+            animation-duration: 2s;
+        }
+        #lang4{
+            animation-name: yash;
+            animation-delay: 6s;
+            animation-duration: 2s;
+        }
+
+        @keyframes yash{
+            0%{
+                color: white;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang" id="lang1">C++</div>
+        <div class="lang" id="lang2">HTML</div>
+        <div class="lang" id="lang3">CSS</div>
+        <div class="lang" id="lang4">JavaScript</div>
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            height: 400px;
+            width: 500px;
+            background-color: cyan;
+        }
+
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 2px solid whitesmoke;
+            animation: yash 0.5s ease-in-out 1s infinite alternate;
+            position: relative;
+        }
+
+        @keyframes yash{
+            0%{
+                background-color: darkblue;
+                top: 0px;
+                left: 0px;
+            }
+            25%{
+                background-color: red;
+                top: 0px;
+                left: 100px;
+            }
+            50%{
+                background-color: black;
+                top: 100px;
+                left: 100px;
+            }
+            75%{
+                background-color: green;
+                top: 100px;
+                left: 0px;
+            }
+            100%{
+                background-color:blue;
+                top: 0px;
+                left: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

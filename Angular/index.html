@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+<body>
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+        <input type="text" ng-model="carname">
+
+        <h1>{{carname}}</h1>
+
+        <ol>
+            <li ng-repeat="x in fruits">
+                {{x}}
+            </li>
+        </ol>
+        <a href="#!red">red</a>
+        <a href="#!blue">blue</a>
+        <a href="#!yellow">yellow</a>
+        <div ng-view></div>
+
+    </div>
+
+    <script>
+        var app = angular.module('myApp', ["ngRoute"]);
+        app.controller('myCtrl', function ($scope) {
+            $scope.fruits = ["mango", "apple", "banana", "guaua", "grapes", "watermelon"]
+            $scope.carname = "Volvo";
+        });
+
+        app.config(['$routeProvider', function ($routerProvider) {
+            $routerProvider
+                .when("/red", {
+                    templateUrl: "red.html"
+                })
+                .when("/blue", {
+                    templateUrl: "blue.html"
+                })
+                .when("/yellow", {
+                    templateUrl: "yellow.html"
+                })
+        }])
+    </script>
+
+</body>
+
+</html>
